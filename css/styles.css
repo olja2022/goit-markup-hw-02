@@ -11,6 +11,8 @@
 }
 body {
   font-family: var(--primary-font);
+  font-size: 14px;
+  color: var(--secondary-text-color-theme-light);
 }
 /*==================COMPONENTS==================*/
 .section-title {
@@ -47,7 +49,6 @@ body {
 }
 .menu-link {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color-theme-light);
@@ -56,10 +57,13 @@ body {
 .menu-link:focus {
   color: var(--accent-color);
 }
+.current {
+  color: var(--accent-color);
+}
+
 .contact-phone-number,
 .contact-mail {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color-theme-light);
@@ -122,6 +126,10 @@ body {
   background-color: var(--accent-color);
   color: var(--primary-text-color-theme-dark);
 }
+.button-current {
+  color: var(--primary-text-color-theme-dark);
+  background-color: var(--accent-color);
+}
 /*=================/HERO==================*/
 
 /*==================OUR ADVANTAGES==================*/
@@ -146,10 +154,8 @@ body {
 }
 .description-advantage {
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--secondary-text-color-theme-light);
 }
 /*=================/OUR ADVANTAGES==================*/
 
@@ -172,7 +178,6 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--secondary-text-color-theme-light);
 }
 /*=================/EMPLOYEES==================*/
 
@@ -194,6 +199,9 @@ body {
 address {
   font-style: normal;
 }
+.background-color {
+  background: #2f303a;
+}
 /*=================/FOOTER==================*/
 
 /*==================PROJECTS==================*/
@@ -209,6 +217,5 @@ address {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: var(--secondary-text-color-theme-light);
 }
 /*=================/PROJECTS==================*/
