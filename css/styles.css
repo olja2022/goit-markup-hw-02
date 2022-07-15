@@ -122,14 +122,12 @@ body {
   border-radius: 4px;
 }
 .modal-btn-portfolio:hover,
-.modal-btn-portfolio:focus {
-  background-color: var(--accent-color);
-  color: var(--primary-text-color-theme-dark);
-}
+.modal-btn-portfolio:focus,
 .button-current {
-  color: var(--primary-text-color-theme-dark);
   background-color: var(--accent-color);
+  color: var(--primary-text-color-theme-dark);
 }
+
 /*=================/HERO==================*/
 
 /*==================OUR ADVANTAGES==================*/
