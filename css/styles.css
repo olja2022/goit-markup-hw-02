@@ -14,7 +14,35 @@ body {
   font-size: 14px;
   color: var(--secondary-text-color-theme-light);
 }
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
+address {
+  font-style: normal;
+}
+button {
+  cursor: pointer;
+}
 /*==================COMPONENTS==================*/
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 .section-title {
   font-weight: 700;
   font-size: 36px;
@@ -22,19 +50,34 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color-theme-light);
+  margin-bottom: 50px;
 }
-.logo-white {
-  color: var(--primary-text-color-theme-dark);
+.section {
+  max-width: 1600px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
-
+.page-advantages,
+.page-our-work {
+  background-color: #f5f5f5;
+}
 /*=================/COMPONENTS==================*/
 
 /*==================HEADER==================*/
-.container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-  border: 1px solid red;
+.page-header {
+  background-color: var(--primary-text-color-theme-dark);
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+}
+.page-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-nav {
+  display: flex;
+  align-items: center;
 }
 .logo {
   font-family: var(--secondary-font);
@@ -43,6 +86,14 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+  margin-right: 93px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu-item:not(:last-child) {
+  margin-right: 50px;
 }
 .logo-black {
   color: #000000;
@@ -52,6 +103,8 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color-theme-light);
+  padding: 32px 0;
+  display: block;
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -60,7 +113,6 @@ body {
 .current {
   color: var(--accent-color);
 }
-
 .contact-phone-number,
 .contact-mail {
   font-weight: 500;
@@ -69,17 +121,22 @@ body {
   color: var(--secondary-text-color-theme-light);
 }
 .contact-mail:hover,
-.contact-mail:focus {
-  color: var(--accent-color);
-}
-
+.contact-mail:focus,
 .contact-phone-number:hover,
 .contact-phone-number:focus {
   color: var(--accent-color);
 }
+.contact-mail {
+  margin-right: 50px;
+}
 /*=================/HEADER==================*/
 
 /*==================HERO==================*/
+.page-hero {
+  background-color: #2f303a;
+  margin: 0 auto;
+  padding: 200px 0;
+}
 .main-title {
   font-weight: 900;
   font-size: 44px;
@@ -88,8 +145,12 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-text-color-theme-dark);
+  max-width: 650px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 .modal-btn {
+  min-width: 200px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -98,11 +159,14 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  cursor: pointer;
   color: var(--primary-text-color-theme-dark);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  padding: 10px 32px;
+  display: block;
+  margin: 0 auto;
+  border: none;
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -117,9 +181,12 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color-theme-light);
-  cursor: pointer;
   background: var(--modal-btn-color-portfolio);
   border-radius: 4px;
+  display: block;
+  padding: 6px 22px;
+  margin: 0 auto;
+  border: none;
 }
 .modal-btn-portfolio:hover,
 .modal-btn-portfolio:focus,
@@ -127,10 +194,28 @@ body {
   background-color: var(--accent-color);
   color: var(--primary-text-color-theme-dark);
 }
-
+.menu-button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.modal-btn-portfolio {
+  flex-basis: calc((100% - 32px) / 5);
+}
+.button-current {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 /*=================/HERO==================*/
 
 /*==================OUR ADVANTAGES==================*/
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -149,19 +234,32 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-text-color-theme-light);
+  margin-bottom: 10px;
 }
 .description-advantage {
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-/*=================/OUR ADVANTAGES==================*/
+.menu-advantage {
+  flex-basis: calc((100% - 90px) / 4);
+}
+/*================/OUR ADVANTAGES==================*/
 
 /*==================OUR WORK==================*/
-
+.list-our-work {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.image-work {
+  flex-basis: calc((100% - 60px) / 3);
+}
 /*=================/OUR WORK==================*/
-
 /*==================EMPLOYEES==================*/
+.page-employees {
+  background-color: var(--modal-btn-color-portfolio);
+}
 .name-employee {
   font-weight: 500;
   font-size: 16px;
@@ -176,10 +274,39 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.employees {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.employees-card {
+  flex-basis: calc((100% - 90px) / 4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--primary-text-color-theme-dark);
+}
+.employees-card-content-wrapper {
+  padding-top: 30px;
 }
 /*=================/EMPLOYEES==================*/
 
 /*==================FOOTER==================*/
+.page-footer {
+  background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.logo-white {
+  color: var(--primary-text-color-theme-dark);
+}
+.logo-footer {
+  display: block;
+  margin-bottom: 20px;
+}
 .location,
 .contact-mail-footer,
 .contact-phone-number-footer {
@@ -189,31 +316,53 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color-theme-dark);
 }
-
 .contact-mail-footer,
 .contact-phone-number-footer {
   color: rgba(255, 255, 255, 0.6);
 }
-address {
-  font-style: normal;
+.location,
+.contact-mail-footer {
+  display: block;
+  margin-bottom: 9px;
 }
-.background-color {
-  background: #2f303a;
-}
+
 /*=================/FOOTER==================*/
 
 /*==================PROJECTS==================*/
+.projects-photo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 50px;
+}
+.menu-projects {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.project-card-content-wrapper {
+  padding-top: 20px;
+  border: 1px solid #eeeeee;
+  background: #ffffff;
+}
 .img-project {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-text-color-theme-light);
+  min-width: 322px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 .description-project {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+  min-width: 322px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 4px;
+  margin-bottom: 20px;
 }
 /*=================/PROJECTS==================*/
